@@ -12,7 +12,6 @@
 </head>
 
 <body>
-  <script src="./index.js"></script>
 
   <h1>Decodifique-se</h1>
 
@@ -20,16 +19,21 @@
 
     <div class="left">
       <span id="titulo">Envie e decifre mensagens recibidas com o Decodifique-se!</span>
-      <textarea name="" class="texto" id="texto" cols="30" rows="10">Digite seu texto...</textarea>
+      <textarea name="" placeholder="Digite seu texto aqui..." class="texto" id="texto" cols="30" rows="10"></textarea>
+    </div>
 
+    <div class="meio">
       <div class="options">
-        <select name="select" id="select">
-          <option value="">Escolha o método</option>
-          <option value="base">Base 64</option>
-          <option value="cesar">Cifra de César</option>
-        </select>
+        <section>
+          <select name="select" id="select">
+            <option value="0" disabled selected>Escolha o método</option>
+            <option class="opcao" value="base">Base 64</option>
+            <option class="opcao" value="cesar">Cifra de César</option>
+          </select>
 
-        <input class="incremento" id="incremento" placeholder="Insira o número da chave" type="number">
+          <input class="incremento" id="chave" placeholder="Insira o número da chave" type="number">
+
+        </section>
 
         <section>
           <div class="metodo">
@@ -57,13 +61,15 @@
 
       </div>
       <!--options-->
-      <input class="enviar" name="enviar" type="submit">
+      <input id="botao" class="enviar" name="enviar" type="submit">
       <label for="enviar"></label>
+
     </div>
-    <!--left-->
+
+
 
     <div class="output" id="output">
-      <div class="right">
+      <div id="right" class="right">
         <h2>Sem mensagens...</h2>
       </div>
       <!--right-->
@@ -74,6 +80,8 @@
   <footer>
     <p>Copyright © 2022 - Projeto para fins educacionais</p>
   </footer>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>
