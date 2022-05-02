@@ -1,34 +1,36 @@
-var texto = document.querySelector("#texto");
-var resposta = document.querySelector("#output");
 var codificar = document.querySelector("#codificar");
 var decodificar = document.querySelector("#decodificar");
-var enviar = document.querySelector("#botao");
 var chave = document.querySelector("#chave");
 var select = document.querySelector("#select");
 var opcoes = document.querySelector(".opcao");
+var enviar = document.querySelector("#botao");
+var metodo = document.querySelector(".metodo");
+var aparecer = document.querySelector("#aparecer");
 
-opcoes.addEventListener("incremento", function () {
-  if (opcao.value === "cesar") {
-    chave.classList.remove("hidden");
+//INPUT DO INCREMENTO -------------------------------------
+
+select.addEventListener("click", function () {
+  if (select.value === "2") {
+    chave.style.display = "flex";
   } else {
-    chave.classList.add("hidden");
+    chave.style.display = "none";
   }
 });
 
-codificar.addEventListener("click", function () {
-  botao.value = "Codificar";
+//SUBSTITUI BOTÃO------------------------------------------
+
+metodo.addEventListener("click", function (e) {
+  if (codificar.checked) {
+    aparecer.innerHTML = `<input class="btnCode" id="btnCoder" type="button" value="Codificar" onclick="cod()">`;
+    document.querySelector("#btnCoder").addEventListener("click", coder);
+  } else if (decodificar.checked) {
+    aparecer.innerHTML = `<input class="btnCode" id="btnDecor" type="button" value="Decodificar" onclick="decod()">`;
+    document.querySelector("#btnDecor").addEventListener("click", decoder);
+  }
 });
 
-decodificar.addEventListener("click", function () {
-  botao.value = "Decodificar";
-});
+//BASE64 CODIFICAR E DECODIFICAR ------------------
 
-function cript() {
-  document.getElementById("output").innerHTML =
-    '<textarea readonly id="texto">' + aaa + "</textarea>";
-}
+//CESAR CODIFICAR E DECODIFICAR ---------------------------------
 
-function descript() {
-  document.getElementById("output").innerHTML =
-    '<textarea readonly id="texto">' + aaa + "</textarea>";
-}
+//BOTÃO COPIAR ------------------------------------------------

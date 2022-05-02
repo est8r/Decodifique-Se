@@ -19,58 +19,52 @@
 
     <div class="left">
       <span id="titulo">Envie e decifre mensagens recibidas com o Decodifique-se!</span>
+
       <textarea name="" placeholder="Digite seu texto aqui..." class="texto" id="texto" cols="30" rows="10"></textarea>
     </div>
 
-    <div class="meio">
+    <form class="meio">
       <div class="options">
-        <section>
-          <select name="select" id="select">
-            <option value="0" disabled selected>Escolha o método</option>
-            <option class="opcao" value="base">Base 64</option>
-            <option class="opcao" value="cesar">Cifra de César</option>
-          </select>
 
-          <input class="incremento" id="chave" placeholder="Insira o número da chave" type="number">
+        <select name="select" id="select">
+          <option value="0" disabled selected>Escolha o método</option>
+          <option id="cifraBase" class="opcao" value="1">Base 64</option>
+          <option id="cifraCesar" class="opcao" value="2">Cifra de César</option>
+        </select>
 
-        </section>
+        <input class="incremento" id="chave" placeholder="Insira o número da chave" type="number">
 
-        <section>
-          <div class="metodo">
-            <label for="codificar">
-              <input type="radio" id="codificar" name="nome" />
-              <div class="radio">
-                <span></span>
-              </div>
-              <span>Codificar</span>
-            </label>
-          </div>
-          <!--metodo-->
 
-          <div class="metodo">
-            <label for="decodificar">
-              <input type="radio" id="decodificar" name="nome" />
-              <div class="radio">
-                <span></span>
-              </div>
-              <span>Decodificar</span>
-            </label>
-          </div>
-          <!--metodo-->
-        </section>
+        <div class="metodo">
+          <label for="codificar">
+            <input type="radio" id="codificar" class="same" name="nome" />
+            <div class="radio">
+              <span></span>
+            </div>
+            <span>Codificar</span>
+          </label>
 
+          <label for="decodificar">
+            <input type="radio" id="decodificar" class="same" name="nome" />
+            <div class="radio">
+              <span></span>
+            </div>
+            <span>Decodificar</span>
+          </label>
+        </div>
+        <!--metodo-->
+
+        <div id="aparecer"><input value="Enviar" id="botao" class="enviar" type="submit"></div>
       </div>
       <!--options-->
-      <input id="botao" class="enviar" name="enviar" type="submit">
-      <label for="enviar"></label>
-
-    </div>
 
 
+
+    </form>
 
     <div class="output" id="output">
       <div id="right" class="right">
-        <h2>Sem mensagens...</h2>
+        <textarea class="resposta" name="" id="resposta" cols="30" rows="10" placeholder="Sem resposta.." readonly></textarea>
       </div>
       <!--right-->
     </div>
