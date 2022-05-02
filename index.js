@@ -30,7 +30,26 @@ metodo.addEventListener("click", function (e) {
 });
 
 //BASE64 CODIFICAR E DECODIFICAR ------------------
+var texto = document.querySelector("#texto");
+var resposta = document.querySelector("#resposta");
 
+function cod() {
+  if (select.value == "1" && codificar.checked) {
+    valor = texto.value;
+    resposta.value = btoa(valor);
+  } else if (codificar.checked && select.value == "2") {
+    cesarCod();
+  }
+}
+
+function decod() {
+  if (select.value == "1" && decodificar.checked) {
+    valor = texto.value;
+    resposta.value = atob(valor);
+  } else if (decodificar.checked && select.value == "2") {
+    cesarDecod();
+  }
+}
 //CESAR CODIFICAR E DECODIFICAR ---------------------------------
 
 //BOTÃO COPIAR ------------------------------------------------
