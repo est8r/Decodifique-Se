@@ -35,7 +35,7 @@ Implementando conceitos desenvolvidos em aula como a criação de
 <img align="center" alt="ester-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
 </div>
 
-## Materiais
+## Materiais e Referencias
 
 ## :bookmark: Imagens | Processo
 
