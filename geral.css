@@ -33,16 +33,16 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 20px;
   width: 40%;
 }
 
-#titulo {
+#title {
   font-weight: 500;
   margin-bottom: 20px;
 }
 
-.texto {
+.text {
   height: 500px;
   width: 400px;
   margin-bottom: 20px;
@@ -50,6 +50,9 @@ main {
   padding: 15px;
   resize: none;
   box-shadow: 5px 5px 0px 1px black;
+  background-color: #e4e4e4;
+  font-size: 16px;
+  outline: 0;
 }
 
 select {
@@ -59,7 +62,7 @@ select {
   margin-bottom: 20px;
 }
 
-.meio {
+.middle {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,27 +74,50 @@ select {
   align-items: center;
   justify-content: center;
   width: 40%;
+  flex-direction: column;
 }
 
 .right {
   display: flex;
-  background-color: rgb(242, 242, 242);
-  height: 600px;
+  background-color: rgb(35, 35, 35);
+  height: 500px;
   width: 400px;
   border-radius: 30px;
   padding: 15px;
   align-items: center;
   justify-content: center;
-  border: 6px #281af3;
-  border-style: dashed;
+  position: relative;
+  overflow: hidden;
 }
 
-#resposta {
-  height: 500px;
-  width: 300px;
+.right::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 120%;
+  background: #281af3;
+  animation: animate 4s linear infinite;
+  box-shadow: inset 0 0 32px 0 #281af3, 0 0 32px 0 #281af3;
 }
 
-.incremento {
+.right::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: rgb(46, 45, 45);
+  border-radius: 30px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.increment {
   height: 40px;
   border-radius: 10px;
   padding: 3px;
@@ -99,7 +125,7 @@ select {
   margin-bottom: 20px;
 }
 
-.enviar {
+.send {
   padding: 10px 100px 10px 100px;
   margin-top: 10px;
   border-radius: 10px;
@@ -109,7 +135,7 @@ select {
   font-weight: 600;
 }
 
-.enviar:hover {
+.send:hover {
   background-color: #7167ff;
   color: black;
   transition: 0.5s ease;
@@ -145,11 +171,11 @@ input[type="radio"] {
   display: none;
 }
 
-.metodo {
+.method {
   margin-bottom: 20px;
 }
 
-.metodo label {
+.method label {
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -193,9 +219,17 @@ input[type="radio"]:checked + .radio span {
   background: #7167ff;
 }
 
-.resposta {
+.answer {
   background-color: transparent;
   resize: none;
+  height: 400px;
+  width: 300px;
+  border: none;
+  z-index: 10;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  outline: 0;
 }
 
 footer {
@@ -210,4 +244,8 @@ footer {
 p {
   font-size: 12px;
   margin-bottom: 10px;
+}
+
+.copy {
+  display: none;
 }

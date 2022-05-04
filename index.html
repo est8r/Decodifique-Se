@@ -13,39 +13,39 @@
 
 <body>
 
-  <h1>Decodifique-se</h1>
+  <h1><strong style="color: #281af3;">{</strong>De<strong style="color: #281af3;">}</strong>codifique-se</h1>
 
   <main>
 
     <div class="left">
-      <span id="titulo">Envie e decifre mensagens recibidas com o Decodifique-se!</span>
+      <span id="title">Envie e decifre mensagens recibidas com o Decodifique-se!</span>
 
-      <textarea name="" placeholder="Digite seu texto aqui..." class="texto" id="texto" cols="30" rows="10"></textarea>
+      <textarea name="" placeholder="Digite seu texto aqui..." class="text" id="text" cols="30" rows="10"></textarea>
     </div>
 
-    <form class="meio">
+    <form class="middle">
       <div class="options">
 
         <select name="select" id="select">
           <option value="0" disabled selected>Escolha o método</option>
-          <option id="cifraBase" class="opcao" value="1">Base 64</option>
-          <option id="cifraCesar" class="opcao" value="2">Cifra de César</option>
+          <option id="cifraBase" class="option" value="1">Base 64</option>
+          <option id="cifraCesar" class="option" value="2">Cifra de César</option>
         </select>
 
-        <input class="incremento" id="chave" placeholder="Insira o número da chave" type="number">
+        <input class="increment" id="keychain" placeholder="Insira o número da chave" type="number">
 
 
-        <div class="metodo">
-          <label for="codificar">
-            <input type="radio" id="codificar" class="same" name="nome" />
+        <div class="method">
+          <label for="code">
+            <input type="radio" id="code" class="same" name="name" />
             <div class="radio">
               <span></span>
             </div>
             <span>Codificar</span>
           </label>
 
-          <label for="decodificar">
-            <input type="radio" id="decodificar" class="same" name="nome" />
+          <label for="decode">
+            <input type="radio" id="decode" class="same" name="name" />
             <div class="radio">
               <span></span>
             </div>
@@ -54,25 +54,26 @@
         </div>
         <!--metodo-->
 
-        <div id="aparecer"><input value="Enviar" id="botao" class="enviar" type="submit"></div>
+        <div id="show">
+          <input value="Enviar" id="botao" class="send" type="submit">
+        </div>
       </div>
       <!--options-->
-
-
 
     </form>
 
     <div class="output" id="output">
       <div id="right" class="right">
-        <textarea class="resposta" name="" id="resposta" cols="30" rows="10" placeholder="Sem resposta.." readonly></textarea>
+        <textarea class="answer" name="" id="answer" cols="30" rows="10" placeholder="Sem resposta.." readonly></textarea>
       </div>
+      <button class="copy" value="Copiar" id="copy">Copiar</button>
       <!--right-->
     </div>
 
   </main>
 
   <footer>
-    <p>Copyright © 2022 - Projeto para fins educacionais</p>
+    <p>Copyright © 2022 - Projeto para fins educacionais | Feito por Ester Messias</p>
   </footer>
 
   <script src="./index.js"></script>
