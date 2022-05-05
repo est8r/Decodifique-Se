@@ -114,3 +114,30 @@ method.addEventListener("click", function (e) {
 });
 
 //BOTÃO COPIAR ------------------------------------------------
+
+function creatCopy() {
+  //chamando
+  var output = document.querySelector("#output");
+  var creatInput = document.createElement("button");
+  //add no html
+  output.append(creatInput);
+  //estilização
+  creatInput.textContent = "Copiar";
+  creatInput.style.padding = "10px 80px 10px 80px";
+  creatInput.style.marginTop = "20px";
+  creatInput.style.borderRadius = "10px";
+  creatInput.style.boxShadow = "4px 4px 0px 1px black";
+  creatInput.style.backgroundColor = "#281af3";
+  creatInput.style.color = "white";
+  creatInput.style.fontWeight = "600";
+
+  //função para o botão copiar
+  creatInput.onclick = function copy() {
+    var answer = document.getElementById("answer").value;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(answer).then(function () {
+        alert("Texto copiado para área de transferência.");
+      });
+    }
+  };
+}
