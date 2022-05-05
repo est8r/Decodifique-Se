@@ -38,14 +38,21 @@ function cesarCod() {
   for (var i = 0; i < text.length; i++) {
     var step = parseInt(keychain);
     var convert = text[i].charCodeAt();
+    //if
     if (convert >= 97 && convert <= 122) {
       var calculation = convert + step;
       if (calculation > 122) {
         calculation = 96 + calculation - 122;
       }
       result += String.fromCharCode(calculation);
+    } else if (convert >= 65 && convert <= 90) {
+      var calculation = convert + step;
+      if (calculation > 90) {
+        calculation = calculation - 26;
+      }
+      result += String.fromCharCode(calculation);
     } else {
-      text[i];
+      result += text[i];
     }
   }
   answer.value = result;
@@ -60,14 +67,21 @@ function cesarDecod() {
   for (var i = 0; i < text.length; i++) {
     var step = parseInt(keychain);
     var convert = text[i].charCodeAt();
+    //if
     if (convert >= 97 && convert <= 122) {
       var calculation = convert - step;
       if (calculation < 97) {
         calculation = 122 + calculation - 96;
       }
       result += String.fromCharCode(calculation);
+    } else if (convert >= 65 && convert <= 90) {
+      var calculation = convert - step;
+      if (calculation < 65) {
+        calculation = 26 + convert;
+      }
+      result += String.fromCharCode(calculation);
     } else {
-      text[i];
+      result += text[i];
     }
   }
   answer.value = result;
