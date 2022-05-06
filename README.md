@@ -1,5 +1,5 @@
 # :round_pushpin: Projeto-Decodifique-Se | O que é?
-Projeto orientado pela Resilia Educação para a criação de um codificador e decodificador de mensagens baseado nos códigos Cifra de César e Base 64 utilizando e manipulação do DOM através do Javascript
+Projeto orientado pela Resilia Educação para a criação de um codificador e decodificador de mensagens baseado nos códigos Cifra de César e Base 64 utilizando a manipulação do DOM através do Javascript
 
 ## :open_file_folder: Proposta do projeto
 A aplicação consiste na criação de um codificador/decodificador de mensagens de cifra de césar e base64, contendo os seguintes parametros:
